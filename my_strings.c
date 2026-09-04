@@ -66,7 +66,7 @@ int mystrcmp(const char *s1, const char *s2)
     return s1[i] - s2[i];
 }
 
-char *mystrchr(const char *s, int ch)
+const char *mystrchr(const char *s, int ch)
 {
     assert(s);
 
@@ -74,7 +74,33 @@ char *mystrchr(const char *s, int ch)
     for (i = 0; s[i]; i++)
     {
         if (s[i] == ch)
-            return (char *)(s + i);
+            return s + i;
+    }
+    return NULL;
+}
+
+const char *mystrstr(const char *s, const char *needle)
+{
+    int f = 1;
+
+    for (size_t i = 0; s[i]; i++)
+    {
+        f = 1;
+
+        for (size_t j = 0; needle[j]; j++)
+        {
+            // если не доходя до конца искомой строки строка s кончилась, то строка уже не будет найдена
+            if (!s[i + j])
+                return NULL;
+
+            if (s[i + j] != needle[j])
+            {
+                f = 0;
+                break;
+            }
+        }
+        if (f)
+            return &s[i];
     }
     return NULL;
 }

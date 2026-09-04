@@ -5,8 +5,9 @@
 #include "matrix.h"
 #include "triangle_matrix.h"
 
-void print_rt(int *matrix)
+void print_circle_matrix(int *matrix, size_t r)
 {
+    assert(matrix);
 }
 
 int main()
