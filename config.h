@@ -8,4 +8,7 @@
 #define CYAN_COLOR "\x1b[36m"
 #define RESET_COLOR "\x1b[0m"
 
+#define disable_line_break() printf("\033[?7l")
+#define enable_line_break() printf("\033[?7h")
+
 #endif // CONFIG_H
