@@ -88,6 +88,8 @@ void circle_print_matrix(int *matrix, size_t r)
         for (size_t x = 0; x <= b - a; x++)
         {
             printf("%d", matrix[sm + x]);
+            // printf("%s[%zu][%zu]%s = %s%d%s", RED_COLOR, y, x, RESET_COLOR,
+            //        GREEN_COLOR, matrix[sm + x], RESET_COLOR);
             printf(" ");
         }
         sm += b - a + 1;
