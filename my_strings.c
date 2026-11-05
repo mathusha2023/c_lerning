@@ -81,11 +81,11 @@ const char *mystrchr(const char *s, int ch)
 
 const char *mystrstr(const char *s, const char *needle)
 {
-    int f = 1;
+    int found = 1;
 
     for (size_t i = 0; s[i]; i++)
     {
-        f = 1;
+        found = 1;
 
         for (size_t j = 0; needle[j]; j++)
         {
@@ -95,11 +95,11 @@ const char *mystrstr(const char *s, const char *needle)
 
             if (s[i + j] != needle[j])
             {
-                f = 0;
+                found = 0;
                 break;
             }
         }
-        if (f)
+        if (found)
             return &s[i];
     }
     return NULL;

@@ -10,34 +10,50 @@
 int main()
 {
     disable_line_break();
-    // const size_t size = 6;
-    // int arr[] = {0,
-    //              1, 2,
-    //              3, 4, 5,
-    //              6, 7, 8, 9,
-    //              10, 11, 12, 13, 14};
+    const size_t size = 6;
+    int arr[] = {0,
+                 1, 2,
+                 3, 4, 5,
+                 6, 7, 8, 9,
+                 10, 11, 12, 13, 14};
 
-    // // проверка для корректных размеров массива
-    // assert(sizeof arr / sizeof arr[0] == size * (size - 1) / 2);
+    // проверка для корректных размеров массива
+    assert(sizeof arr / sizeof arr[0] == size * (size - 1) / 2);
 
-    // tr_print_matrix(arr, size);
-    // printf("\nChanging element...\n");
+    tr_print_matrix(arr, size);
+    printf("\nChanging element...\n");
 
-    // tr_put_el(arr, size, 0, 4, 1488);
+    tr_set_el(arr, size, 0, 4, 1488);
 
-    // printf("Successful changed\n");
-    // tr_print_matrix(arr, size);
+    printf("Successful changed\n");
+    tr_print_matrix(arr, size);
 
-    const size_t r = 10;
-    int arr[1000] = {};
+    // const size_t r = 10;
+    // int arr[1000] = {};
 
-    circle_print_matrix(arr, r);
-    printf("\n");
+    // circle_print_matrix(arr, r);
+    // printf("\n");
 
-    circle_put_el(arr, r, 5, 3, 9);
+    // circle_set_el(arr, r, 5, 3, 9);
 
-    circle_print_matrix(arr, r);
+    // circle_print_matrix(arr, r);
 
-    enable_line_break();
+    // enable_line_break();
+
+    // char s[] = "QWERTY123456";
+    // char *s1 = s;
+    // printf("%llu\n", *(long long unsigned *)s1);
+
+    // unsigned long long temp = *(unsigned long long *)s1;
+    // printf("%llu\n", temp);
+
+    // f(s1);
+
     return 0;
 }
+
+// void f(char *s1)
+// {
+//     unsigned long long temp = *(unsigned long long *)s1;
+//     printf("%llu\n", temp);
+// }

@@ -56,11 +56,12 @@ int *circle_get_el(int *matrix, size_t r, size_t x, size_t y)
     printf("sm = %lu\n", sm);
 
     free(p);
+    p = NULL;
 
     return &matrix[sm + x];
 }
 
-void circle_put_el(int *matrix, size_t r, size_t x, size_t y, int value)
+void circle_set_el(int *matrix, size_t r, size_t x, size_t y, int value)
 {
     *circle_get_el(matrix, r, x, y) = value;
 }

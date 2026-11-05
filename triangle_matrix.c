@@ -28,7 +28,7 @@ int *tr_get_el(int *matrix, size_t size, size_t x, size_t y)
     return &matrix[y * (y - 1) / 2 + x];
 }
 
-void tr_put_el(int *matrix, size_t size, size_t x, size_t y, int value)
+void tr_set_el(int *matrix, size_t size, size_t x, size_t y, int value)
 {
     assert(matrix);
     assert(size > 1);
